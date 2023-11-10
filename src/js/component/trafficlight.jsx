@@ -3,18 +3,18 @@ import React, { useState } from 'react';
 
 export function TrafficLight (){
 
-	const [glowColor,setGlowColor] = useState ("red");
-
+	const [clickColor,setClickColor] = useState ("red");
+	
 	
 	return (
 		<>
 		<div className='traffic-light'>
-			<div onClick={()=> setGlowColor("red")}
-			className = {"light red" + (glowColor === "red" ? " glow" : "" )}></div>
-			<div onClick={()=> setGlowColor("yellow")}
-			className = {"light yellow" + (glowColor === "yellow" ? " glow" : "" )}></div>
-			<div onClick={()=> setGlowColor("green")}
-			className = {"light green" + (glowColor === "green" ? " glow" : "" )}></div>
+			<div onClick={()=> setClickColor("red")}
+			className = {"light red" + (clickColor === "red" ? " glow" : "" )}></div>
+			<div onClick={()=> setClickColor("yellow")}
+			className = {"light yellow" + (clickColor === "yellow" ? " glow" : "" )}></div>
+			<div onClick={()=> setClickColor("green")}
+			className = {"light green" + (clickColor === "green" ? " glow" : "" )}></div>
 		</div>
 		</>		
 	);
